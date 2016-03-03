@@ -14,14 +14,9 @@ class Students {
 
     public:
 
-        Students(string name, string last_name) {
-            Students::set_name(name);
-            Students::set_last_name(last_name);
-        }
+        Students(std::string, std::string);
 
-        ~Students(){
-            cout << "Memory has been cleaned. Good bye." << endl;
-        }
+        ~Students();
 
         void set_name(string student_name );
 

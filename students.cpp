@@ -6,6 +6,16 @@
 
 using namespace std;
 
+Students::Students(string name, string last_name) {
+    Students::set_name(name);
+    Students::set_last_name(last_name);
+}
+
+Students::~Students() {
+    cout << "Memory has been cleaned. Good bye." << endl;
+}
+
+
 
 void Students::set_name(string student_name) {
     Students::name = student_name;
