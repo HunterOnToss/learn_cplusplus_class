@@ -32,7 +32,7 @@ int main() {
 
     student.set_scores(score);
 
-    float average_ball =  sum / 5.0;
+    float average_ball = (float) (sum / 5.0);
 
     student.set_average_ball(average_ball);
 
