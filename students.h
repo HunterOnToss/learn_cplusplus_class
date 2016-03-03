@@ -14,10 +14,9 @@ class Students {
 
     public:
 
-        Students(int default_score) {
-            for (int i = 0; i < 5; ++i) {
-                scores[i] = default_score;
-            }
+        Students(string name, string last_name) {
+            Students::set_name(name);
+            Students::set_last_name(last_name);
         }
 
         ~Students(){

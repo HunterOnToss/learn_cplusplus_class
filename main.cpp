@@ -4,18 +4,16 @@
 using namespace std;
 
 int main() {
+    string name = "Leonardo";
+    string last_name = "Dicaprio";
 
-    Students *student = new Students(2);
+    //    cout << "Name: ";
+    //    getline(cin, name);
+    //
+    //    cout << "Last name: ";
+    //    getline(cin, last_name);
 
-
-    string name;
-    string last_name;
-
-    cout << "Name: ";
-    getline(cin, name);
-
-    cout << "Last name: ";
-    getline(cin, last_name);
+    Students *student = new Students(name, last_name);
 
     student -> set_name(name);
     student -> set_last_name(last_name);
