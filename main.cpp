@@ -1,43 +1,27 @@
 #include <iostream>
-#include "students.h"
+#include <vector>
+#include "student.h"
 
 using namespace std;
 
 int main() {
-    string name = "Leonardo";
-    string last_name = "Dicaprio";
 
-    //    cout << "Name: ";
-    //    getline(cin, name);
-    //
-    //    cout << "Last name: ";
-    //    getline(cin, last_name);
+    vector<int> scores;
 
-    Students *student = new Students(name, last_name);
+    scores.push_back(5);
+    scores.push_back(3);
+    scores.push_back(5);
+    scores.push_back(4);
+    scores.push_back(3);
+    scores.push_back(3);
+    scores.push_back(3);
+    scores.push_back(5);
 
-    student -> set_name(name);
-    student -> set_last_name(last_name);
+    student *stud = new student("Декабрио", "Лео", "Оскорович", scores);
 
-    int score[5];
-    int sum = 0;
+    cout << stud -> get_full_name() << endl;
 
-    for (int i = 0; i < 5; ++i) {
-        cout << "Score " << i+1 << ": ";
-        cin >> score[i];
+    cout << "Средний балл: " << stud -> get_average_score() << endl;
 
-        sum += score[i];
-
-    }
-
-    student -> set_scores(score);
-
-    float average_ball = (float) (sum / 5.0);
-
-    student -> set_average_ball(average_ball);
-
-    cout << "Average ball for " << student -> get_name() << " " <<
-            student -> get_last_name() << " is " << student -> get_average_ball() << endl;
-
-    delete student;
     return 0;
 }
