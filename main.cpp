@@ -38,6 +38,8 @@ int main() {
     cout << "Average ball for " << student -> get_name() << " " <<
             student -> get_last_name() << " is " << student -> get_average_ball() << endl;
 
+    student -> save();
+
     delete student;
     return 0;
 }

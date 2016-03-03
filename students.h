@@ -32,6 +32,8 @@ class Students {
 
         float get_average_ball();
 
+        void save();
+
     private:
         int scores[5];
         float average_ball;
