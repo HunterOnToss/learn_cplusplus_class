@@ -13,7 +13,7 @@ Students::Students(string name, string last_name) {
 }
 
 Students::~Students() {
-    cout << "Memory has been cleaned. Good bye." << endl;
+    Students::save();
 }
 
 
