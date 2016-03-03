@@ -5,7 +5,8 @@ using namespace std;
 
 int main() {
 
-    Students student;
+    Students *student = new Students;
+
 
     string name;
     string last_name;
@@ -16,8 +17,8 @@ int main() {
     cout << "Last name: ";
     getline(cin, last_name);
 
-    student.set_name(name);
-    student.set_last_name(last_name);
+    student -> set_name(name);
+    student -> set_last_name(last_name);
 
     int score[5];
     int sum = 0;
@@ -30,14 +31,14 @@ int main() {
 
     }
 
-    student.set_scores(score);
+    student -> set_scores(score);
 
     float average_ball = (float) (sum / 5.0);
 
-    student.set_average_ball(average_ball);
+    student -> set_average_ball(average_ball);
 
-    cout << "Average ball for " << student.get_name() << " " <<
-            student.get_last_name() << " is " << student.get_average_ball() << endl;
+    cout << "Average ball for " << student -> get_name() << " " <<
+            student -> get_last_name() << " is " << student -> get_average_ball() << endl;
 
     return 0;
 }
