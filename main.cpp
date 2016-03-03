@@ -5,7 +5,7 @@ using namespace std;
 
 int main() {
 
-    Students *student = new Students;
+    Students *student = new Students(2);
 
 
     string name;
@@ -40,5 +40,6 @@ int main() {
     cout << "Average ball for " << student -> get_name() << " " <<
             student -> get_last_name() << " is " << student -> get_average_ball() << endl;
 
+    delete student;
     return 0;
 }

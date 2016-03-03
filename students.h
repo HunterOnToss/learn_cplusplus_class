@@ -6,12 +6,23 @@
 #define TESTCLAS_STUDENTS_H
 #pragma once
 #include <string>
+#include <iostream>
 
 using namespace std;
 
 class Students {
 
     public:
+
+        Students(int default_score) {
+            for (int i = 0; i < 5; ++i) {
+                scores[i] = default_score;
+            }
+        }
+
+        ~Students(){
+            cout << "Memory has been cleaned. Good bye." << endl;
+        }
 
         void set_name(string student_name );
 
